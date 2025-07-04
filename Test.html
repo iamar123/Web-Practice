@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Advanced Website with Tabs</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        background: linear-gradient(135deg, #00b4db, #0083b0);
+        min-height: 100vh;
+        color: #fff;
+        overflow-x: hidden;
+      }
+
+      header {
+        background-color: rgba(0, 0, 0, 0.2);
+        padding: 20px;
+        text-align: center;
+        backdrop-filter: blur(5px);
+      }
+
+      nav {
+        display: flex;
+        justify-content: center;
+        background-color: rgba(0, 0, 0, 0.3);
+      }
+
+      nav button {
+        background: transparent;
+        border: none;
+        color: #fff;
+        padding: 15px 25px;
+        cursor: pointer;
+        font-size: 16px;
+        transition: background 0.3s;
+      }
+
+      nav button:hover,
+      nav button.active {
+        background-color: rgba(255, 255, 255, 0.2);
+      }
+
+      .tab-content {
+        display: none;
+        padding: 30px;
+        text-align: center;
+      }
+
+      .tab-content.active {
+        display: block;
+        animation: fadeIn 0.5s ease;
+      }
+
+      img {
+        width: 200px;
+        height: auto;
+        border-radius: 15px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+        margin-top: 20px;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      footer {
+        text-align: center;
+        padding: 20px;
+        font-size: 14px;
+        background: rgba(0, 0, 0, 0.2);
+        backdrop-filter: blur(5px);
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+      }
+
+      @media (max-width: 600px) {
+        nav button {
+          padding: 10px;
+          font-size: 14px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>My Expert Website</h1>
+      <p>With Tabs, Panning Effects, and Responsive Layout</p>
+    </header>
+
+    <nav>
+      <button class="tab-btn active" data-tab="home">Home</button>
+      <button class="tab-btn" data-tab="about">About</button>
+      <button class="tab-btn" data-tab="gallery">Gallery</button>
+      <button class="tab-btn" data-tab="contact">Contact</button>
+    </nav>
+
+    <div id="home" class="tab-content active">
+      <h2>Welcome to My Website!</h2>
+      <p>This is the home section with panning effect background.</p>
+      <img src="iamar.jpg" alt="Sample Image" />
+    </div>
+
+    <div id="about" class="tab-content">
+      <h2>About Me</h2>
+      <p>I love building websites and learning new technologies.</p>
+      <img src="https://via.placeholder.com/200?text=About" alt="About Image" />
+    </div>
+
+    <div id="gallery" class="tab-content">
+      <h2>Gallery</h2>
+      <p>Check out some of my works below.</p>
+      <img
+        src="https://via.placeholder.com/200?text=Gallery+1"
+        alt="Gallery Image 1"
+      />
+      <img
+        src="https://via.placeholder.com/200?text=Gallery+2"
+        alt="Gallery Image 2"
+      />
+    </div>
+
+    <div id="contact" class="tab-content">
+      <h2>Contact Me</h2>
+      <p>
+        Feel free to email me:
+        <a href="mailto:example@email.com" style="color: #ffd700"
+          >example@email.com</a
+        >
+      </p>
+    </div>
+
+    <footer>&copy; 2025 My Expert Website. All rights reserved.</footer>
+
+    <script>
+      const buttons = document.querySelectorAll(".tab-btn");
+      const contents = document.querySelectorAll(".tab-content");
+
+      buttons.forEach((button) => {
+        button.addEventListener("click", () => {
+          buttons.forEach((btn) => btn.classList.remove("active"));
+          contents.forEach((content) => content.classList.remove("active"));
+
+          button.classList.add("active");
+          document.getElementById(button.dataset.tab).classList.add("active");
+        });
+      });
+    </script>
+  </body>
+</html>
