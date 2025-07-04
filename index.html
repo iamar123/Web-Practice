@@ -3,162 +3,91 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Advanced Website with Tabs</title>
+    <title>Iamar's Portfolio</title>
     <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-
       body {
+        margin: 0;
         font-family: Arial, sans-serif;
-        background: linear-gradient(135deg, #00b4db, #0083b0);
-        min-height: 100vh;
-        color: #fff;
-        overflow-x: hidden;
+        background: #f0f4f8;
+        color: #333;
       }
-
       header {
-        background-color: rgba(0, 0, 0, 0.2);
-        padding: 20px;
-        text-align: center;
-        backdrop-filter: blur(5px);
-      }
-
-      nav {
-        display: flex;
-        justify-content: center;
-        background-color: rgba(0, 0, 0, 0.3);
-      }
-
-      nav button {
-        background: transparent;
-        border: none;
-        color: #fff;
-        padding: 15px 25px;
-        cursor: pointer;
-        font-size: 16px;
-        transition: background 0.3s;
-      }
-
-      nav button:hover,
-      nav button.active {
-        background-color: rgba(255, 255, 255, 0.2);
-      }
-
-      .tab-content {
-        display: none;
-        padding: 30px;
+        background: linear-gradient(135deg, #00b4d8, #0077b6);
+        color: white;
+        padding: 40px 20px;
         text-align: center;
       }
-
-      .tab-content.active {
-        display: block;
-        animation: fadeIn 0.5s ease;
+      header img {
+        width: 150px;
+        border-radius: 50%;
+        border: 4px solid white;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
       }
-
-      img {
-        width: 200px;
-        height: auto;
-        border-radius: 15px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
-        margin-top: 20px;
+      header h1 {
+        margin-top: 15px;
+        font-size: 2.5rem;
       }
-
-      @keyframes fadeIn {
-        from {
-          opacity: 0;
-          transform: translateY(20px);
-        }
-        to {
-          opacity: 1;
-          transform: translateY(0);
-        }
+      header p {
+        font-size: 1.2rem;
       }
-
+      section {
+        max-width: 800px;
+        margin: 40px auto;
+        padding: 0 20px;
+      }
+      h2 {
+        color: #0077b6;
+        border-bottom: 2px solid #00b4d8;
+        padding-bottom: 5px;
+      }
+      ul {
+        list-style-type: square;
+        padding-left: 20px;
+      }
       footer {
         text-align: center;
         padding: 20px;
-        font-size: 14px;
-        background: rgba(0, 0, 0, 0.2);
-        backdrop-filter: blur(5px);
-        position: fixed;
-        bottom: 0;
-        width: 100%;
-      }
-
-      @media (max-width: 600px) {
-        nav button {
-          padding: 10px;
-          font-size: 14px;
-        }
+        background: #0077b6;
+        color: white;
+        margin-top: 50px;
       }
     </style>
   </head>
   <body>
     <header>
-      <h1>My Expert Website</h1>
-      <p>With Tabs, Panning Effects, and Responsive Layout</p>
+      <img src="iamar.jpg" alt="Iamar Profile" />
+      <h1>Hi, I'm Iamar!</h1>
+      <p>System Improvement Officer | Web Dev Enthusiast | Seafarer</p>
     </header>
 
-    <nav>
-      <button class="tab-btn active" data-tab="home">Home</button>
-      <button class="tab-btn" data-tab="about">About</button>
-      <button class="tab-btn" data-tab="gallery">Gallery</button>
-      <button class="tab-btn" data-tab="contact">Contact</button>
-    </nav>
-
-    <div id="home" class="tab-content active">
-      <h2>Welcome to My Website!</h2>
-      <p>This is the home section with panning effect background.</p>
-      <img src="iamar.jpg" alt="Sample Image" />
-    </div>
-
-    <div id="about" class="tab-content">
+    <section>
       <h2>About Me</h2>
-      <p>I love building websites and learning new technologies.</p>
-      <img src="https://via.placeholder.com/200?text=About" alt="About Image" />
-    </div>
-
-    <div id="gallery" class="tab-content">
-      <h2>Gallery</h2>
-      <p>Check out some of my works below.</p>
-      <img
-        src="https://via.placeholder.com/200?text=Gallery+1"
-        alt="Gallery Image 1"
-      />
-      <img
-        src="https://via.placeholder.com/200?text=Gallery+2"
-        alt="Gallery Image 2"
-      />
-    </div>
-
-    <div id="contact" class="tab-content">
-      <h2>Contact Me</h2>
       <p>
-        Feel free to email me:
-        <a href="mailto:example@email.com" style="color: #ffd700"
-          >example@email.com</a
-        >
+        I'm passionate about technology, continuous learning, and finding ways
+        to improve systems and processes. Exploring web development and creating
+        personal projects is my new focus.
       </p>
-    </div>
+    </section>
 
-    <footer>&copy; 2025 My Expert Website. All rights reserved.</footer>
+    <section>
+      <h2>Skills</h2>
+      <ul>
+        <li>System Improvement & Process Optimization</li>
+        <li>Basic Web Development (HTML, CSS)</li>
+        <li>Technical Inspection (Fuel, Marine Operations)</li>
+        <li>Team Coordination & Reporting</li>
+      </ul>
+    </section>
 
-    <script>
-      const buttons = document.querySelectorAll(".tab-btn");
-      const contents = document.querySelectorAll(".tab-content");
+    <section>
+      <h2>Projects</h2>
+      <ul>
+        <li>Fuel Monitoring Dashboard (Excel-based)</li>
+        <li>System Process Automation (On Progress)</li>
+        <li>Learning GitHub Pages for Web Deployment</li>
+      </ul>
+    </section>
 
-      buttons.forEach((button) => {
-        button.addEventListener("click", () => {
-          buttons.forEach((btn) => btn.classList.remove("active"));
-          contents.forEach((content) => content.classList.remove("active"));
-
-          button.classList.add("active");
-          document.getElementById(button.dataset.tab).classList.add("active");
-        });
-      });
-    </script>
+    <footer>📧 Contact me: iamar@example.com</footer>
   </body>
 </html>
