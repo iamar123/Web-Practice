@@ -14,11 +14,12 @@
         flex-direction: column;
         align-items: center;
         min-height: 100vh;
+        scroll-behavior: smooth;
       }
       header {
         text-align: center;
         padding: 60px 20px 20px;
-        animation: fadeIn 2s ease;
+        animation: fadeIn 1.5s ease;
       }
       header img {
         width: 160px;
@@ -39,7 +40,7 @@
         padding: 15px 25px;
         border-radius: 8px;
         margin: 20px 0;
-        animation: slideIn 2s ease;
+        animation: slideIn 1.5s ease;
       }
       .buttons {
         display: flex;
@@ -59,10 +60,24 @@
       .buttons a:hover {
         background: #03045e;
       }
+      .socials {
+        margin-top: 15px;
+      }
+      .socials a {
+        margin: 0 10px;
+        color: #fff;
+        font-size: 1.5rem;
+        text-decoration: none;
+        transition: color 0.3s;
+      }
+      .socials a:hover {
+        color: #ffb703;
+      }
       section {
         max-width: 800px;
         padding: 20px;
         text-align: center;
+        animation: fadeIn 1s ease;
       }
       h2 {
         color: #caf0f8;
@@ -79,7 +94,7 @@
       @keyframes fadeIn {
         from {
           opacity: 0;
-          transform: scale(0.9);
+          transform: scale(0.95);
         }
         to {
           opacity: 1;
@@ -104,6 +119,9 @@
         .buttons a {
           padding: 10px 20px;
         }
+        .socials a {
+          font-size: 1.3rem;
+        }
       }
     </style>
   </head>
@@ -121,7 +139,16 @@
         <a href="mailto:iamar.arnaiz@gmail.com?subject=Website Inquiry"
           >Contact Me</a
         >
-        <a href="https://github.com/iamar123" target="_blank">GitHub Profile</a>
+        <a href="https://github.com/iamar123" target="_blank">GitHub</a>
+      </div>
+      <div class="socials">
+        <a href="https://www.facebook.com/arnaiziamar/" target="_blank"
+          >🌐 FB</a
+        >
+        <a href="https://instagram.com/iamar123" target="_blank">📸 IG</a>
+        <a href="https://linkedin.com/in/iamar123" target="_blank"
+          >💼 LinkedIn</a
+        >
       </div>
     </header>
 
