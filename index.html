@@ -7,87 +7,140 @@
     <style>
       body {
         margin: 0;
-        font-family: Arial, sans-serif;
-        background: #f0f4f8;
-        color: #333;
+        font-family: "Segoe UI", Arial, sans-serif;
+        background: linear-gradient(135deg, #00b4d8, #0077b6);
+        color: #fff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        min-height: 100vh;
       }
       header {
-        background: linear-gradient(135deg, #00b4d8, #0077b6);
-        color: white;
-        padding: 40px 20px;
         text-align: center;
+        padding: 60px 20px 20px;
+        animation: fadeIn 2s ease;
       }
       header img {
-        width: 150px;
+        width: 160px;
         border-radius: 50%;
-        border: 4px solid white;
-        box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+        border: 4px solid #fff;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
       }
-      header h1 {
-        margin-top: 15px;
-        font-size: 2.5rem;
+      h1 {
+        font-size: 2.8rem;
+        margin: 20px 0 10px;
       }
-      header p {
+      p.tagline {
         font-size: 1.2rem;
+        color: #dff6ff;
+      }
+      .message {
+        background: rgba(255, 255, 255, 0.1);
+        padding: 15px 25px;
+        border-radius: 8px;
+        margin: 20px 0;
+        animation: slideIn 2s ease;
+      }
+      .buttons {
+        display: flex;
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 20px 0;
+      }
+      .buttons a {
+        background: #023e8a;
+        color: #fff;
+        padding: 12px 25px;
+        border-radius: 25px;
+        text-decoration: none;
+        transition: background 0.3s;
+      }
+      .buttons a:hover {
+        background: #03045e;
       }
       section {
         max-width: 800px;
-        margin: 40px auto;
-        padding: 0 20px;
+        padding: 20px;
+        text-align: center;
       }
       h2 {
-        color: #0077b6;
-        border-bottom: 2px solid #00b4d8;
-        padding-bottom: 5px;
-      }
-      ul {
-        list-style-type: square;
-        padding-left: 20px;
+        color: #caf0f8;
+        margin-bottom: 10px;
       }
       footer {
-        text-align: center;
+        margin-top: auto;
         padding: 20px;
-        background: #0077b6;
-        color: white;
-        margin-top: 50px;
+        text-align: center;
+        background: #023e8a;
+        width: 100%;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: scale(0.9);
+        }
+        to {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+      @keyframes slideIn {
+        from {
+          transform: translateY(-20px);
+          opacity: 0;
+        }
+        to {
+          transform: translateY(0);
+          opacity: 1;
+        }
+      }
+
+      @media (max-width: 600px) {
+        h1 {
+          font-size: 2rem;
+        }
+        .buttons a {
+          padding: 10px 20px;
+        }
       }
     </style>
   </head>
   <body>
     <header>
-      <img src="iamar.jpg" alt="Iamar Profile" />
+      <img src="iamar.jpg" alt="Iamar's Photo" />
       <h1>Hi, I'm Iamar!</h1>
-      <p>System Improvement Officer | Web Dev Enthusiast | Seafarer</p>
+      <p class="tagline">System Improvement | Web Dev | Seafarer</p>
+      <div class="message">
+        🚀 Welcome to my personal space online! Exploring tech, improving
+        systems, and learning every day.
+      </div>
+      <div class="buttons">
+        <a href="#projects">View Projects</a>
+        <a href="mailto:iamar.arnaiz@gmail.com?subject=Website Inquiry"
+          >Contact Me</a
+        >
+        <a href="https://github.com/iamar123" target="_blank">GitHub Profile</a>
+      </div>
     </header>
 
-    <section>
-      <h2>About Me</h2>
+    <section id="projects">
+      <h2>My Projects</h2>
       <p>
-        I'm passionate about technology, continuous learning, and finding ways
-        to improve systems and processes. Exploring web development and creating
-        personal projects is my new focus.
+        🔧 Fuel Monitoring Dashboard<br />⚙️ System Process Improvement<br />💻
+        Learning GitHub Pages for web deployment
       </p>
     </section>
 
     <section>
       <h2>Skills</h2>
-      <ul>
-        <li>System Improvement & Process Optimization</li>
-        <li>Basic Web Development (HTML, CSS)</li>
-        <li>Technical Inspection (Fuel, Marine Operations)</li>
-        <li>Team Coordination & Reporting</li>
-      </ul>
+      <p>
+        ✅ System Improvement & Reporting<br />✅ Basic Web Development
+        (HTML/CSS)<br />✅ Marine Operations & Fuel Inspection
+      </p>
     </section>
 
-    <section>
-      <h2>Projects</h2>
-      <ul>
-        <li>Fuel Monitoring Dashboard (Excel-based)</li>
-        <li>System Process Automation (On Progress)</li>
-        <li>Learning GitHub Pages for Web Deployment</li>
-      </ul>
-    </section>
-
-    <footer>📧 Contact me: iamar@example.com</footer>
+    <footer>&copy; 2025 Iamar's Portfolio. All rights reserved.</footer>
   </body>
 </html>
